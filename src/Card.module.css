@@ -1,0 +1,90 @@
+.card {
+    width:90vw;
+    max-width:420px;
+    aspect-ratio: 9/14;
+    background:violet;
+    border-radius: 8px;
+    margin:20px auto;
+    box-shadow: 0 1px 24px #000;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    position:absolute;
+    z-index:3;
+    border:3px solid #333;
+}
+
+.card_top {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+.leftSwipe, .rightSwipe {
+    padding-top:40px;
+    position:relative;
+    cursor:pointer;
+    &:hover > .btn_mask {
+        opacity:0.4;
+    }
+}
+.leftSwipe {
+    padding-left: 24px;
+}
+.rightSwipe {
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 24px;
+}
+.leftSwipe span, .rightSwipe span {
+    color:#fff;
+    z-index:9;
+    position: inherit;
+}
+.btn_mask {
+    position:absolute;
+    background:#333;
+    width:98%;
+    height:98%;
+    z-index:6;
+    top:0;
+    opacity: 0;
+    border-radius: 5px 0 0 0; 
+}
+.leftSwipe .btn_mask {
+    left:0;
+}
+.rightSwipe .btn_mask {
+    border-radius:0 5px 0 0; 
+    right:0;
+}
+
+
+
+.card_bottom {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+.cardText {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:0 16px;
+
+}
+.text_mask {
+    position:absolute;
+    background:#333;
+    width:100%;
+    height:100%;
+    z-index:6;
+    top:0;
+    left:0;
+    opacity: 0.6;
+    border-radius:0 0 5px 5px;
+}
+.cardText p {
+    color:#fff;
+      z-index:9;
+}
