@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { Context } from "./App";
 import CSS from './Nav.module.css'
 import Apple from './assets/apple.png'
@@ -7,9 +7,12 @@ import Army from './assets/army.png'
 import Money from './assets/money.png'
 
 export default function Nav() {
-    const [stats, setStats] = useContext(Context);
+    const [stats] = useContext(Context);
+    const [navStats, setNavStats] = useState();
     console.log(stats);
-    setStats(prevState => prevState);
+    useEffect(() => {
+      setNavStats(stats)
+    }, [stats]);
     return (
       <nav>
         <ul>
@@ -19,7 +22,7 @@ export default function Nav() {
               <p>Food</p>
             </div>
             <p>
-              <span>{stats.food + "%"}</span>
+              <span>{navStats.food + "%"}</span>
             </p>
             {/* <div className={CSS.apple_full} alt="" style={{height:stats.food+"%"}}></div> */}
           </li>
@@ -29,7 +32,7 @@ export default function Nav() {
               <p>People</p>
             </div>
             <p>
-              <span>{stats.people + "%"}</span>
+              <span>{navStats.people + "%"}</span>
             </p>
             {/* <div className={CSS.people_full} alt="" style={{height:stats.people+"%"}}></div> */}
           </li>
@@ -39,7 +42,7 @@ export default function Nav() {
               <p>Army</p>
             </div>
             <p>
-              <span>{stats.army + "%"}</span>
+              <span>{navStats.army + "%"}</span>
             </p>
             {/* <div className={CSS.army_full} alt="" style={{height:stats.army+"%"}}></div> */}
           </li>
@@ -49,7 +52,7 @@ export default function Nav() {
               <p>Money</p>
             </div>
             <p>
-              <span>{stats.money + "%"}</span>
+              <span>{navStats.money + "%"}</span>
             </p>
             {/* <div className={CSS.money_full} alt="" style={{height:stats.money+"%"}}></div> */}
           </li>
