@@ -1,8 +1,11 @@
 nav {
-    width:100vw;
-    height:48px;
+    width:90vw;
+    height:112px;
     max-width:420px;
-    margin: 20px auto;
+    margin: 0 auto;
+    background:#e5e5e5;
+    border-radius:0 0 25px 25px;
+    box-shadow: 0 2px 12px #333;
   }
   
   nav ul {
@@ -10,22 +13,41 @@ nav {
     height:100%;
     display:flex;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
   }
   
   li {
-    width:48px;
-    height:48px;
+    width:52px;
+    height:52px;
     list-style:none;
+    margin-top: 8px;
     /* background: url('./assets/cutlery.png') no-repeat;
     background-size:40px;
      background: linear-gradient(135deg, rgba(255, 121, 0, .5) 0%, rgba(250, 0, 255, .5) 54%, rgba(126, 0, 255, .5) 100%), url('https://picsum.photos/id/1/200/300') no-repeat;
     ; */
      position: relative;
+
+     div > p {
+   
+      font-weight: bold;
+     }
+     p {
+      text-align: center;
+     }
+     span{
+      width: 100%;
+      text-align: center;
+      font-style: italic;
+      font-size:14px;
+     }
+    
   }
   
   li img {
+    margin-left:3px;
     width: 100%;
+    max-width: 48px;
+    max-height: 48px;
     height:100%;
     z-index:1;
   }
@@ -35,7 +57,7 @@ nav {
     height:10%;/*tweak this*/
     width:100%;
     position:absolute;
-  bottom:0;
+    bottom:0;
     left: 0;
     z-index:6;
     overflow: hidden; /* Hide overflowing content */

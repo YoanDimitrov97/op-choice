@@ -4,9 +4,11 @@ import CSS from './Card.module.css'
 
 
 const Card = (props) => {
-  const [stats, setStats] = useContext(Context);
+  const [stats, setStats, finishedEvents, setFinishedEvents, setIsNextRound] =
+    useContext(Context);
   const [isVisible, setIsVisible] = useState(true);
 
+  //calculate gains/loses after left/right swipe
   const conclusionCalculation = (eventAfter) => {
     const gains = eventAfter?.gains;
     const loses = eventAfter?.loses;
@@ -23,16 +25,26 @@ const Card = (props) => {
       })
 
     //calculate loses
-    if (losesArr.length > 0)
-      losesArr.map(sphere => {
+    if (losesArr.length > 0) {
+      losesArr.map((sphere) => {
         loses &&
-          setStats(prevStats => ({
+          setStats((prevStats) => ({
             ...prevStats,
-            sphere: stats[sphere] -= loses[sphere]
-          }))
-      })
+            sphere: (stats[sphere] -= loses[sphere]),
+          }));
+      });
+
+      //if(stats["food"] === 0 || stats["people"] === 0 || stats["army"] === 0 || stats["money"])
+        //setIsGameOver(true)
+    }
+
 
     setIsVisible(false);
+    setFinishedEvents((prev) => [...prev, props.event.id]);
+
+
+    //clicking the final event that lets you move to next year
+    props.event?.nextRound && setIsNextRound(true)
     //console.log(gains, "gained", loses, "lost");
     //console.log(Object.keys(gains));
   }
@@ -45,8 +57,10 @@ const Card = (props) => {
   }
 
   return (
-    <div className={`${CSS.card} ${isVisible ? '' : CSS.hidden}`} style={{ zIndex: props.id, background: props.event.colorScheme }}>
-
+    <div
+      className={`${CSS.card} ${isVisible ? "" : CSS.hidden}`}
+      style={{ zIndex: props.id, background: props.event.colorScheme }}
+    >
       <div className={CSS.card_top}>
         <img className={CSS.background_img} src={props.event.imageUrl} />
         <div className={CSS.leftSwipe} onClick={handleClickLeft}>
