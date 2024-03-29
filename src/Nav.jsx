@@ -8,6 +8,7 @@ import Money from './assets/money.png'
 
 export default function Nav() {
     const [stats, setStats] = useContext(Context);
+    console.log(stats);
     return (
       <nav>
         <ul>
