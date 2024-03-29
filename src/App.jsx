@@ -19,7 +19,7 @@ function App() {
   });
 
   useEffect(() => {
-    console.log(isGameOver, isNextRound);
+    console.log(isNextRound);
     //player successfully survived the round
     if (isNextRound) {
        generateRound();
@@ -28,7 +28,8 @@ function App() {
       // Reset finished events
       setFinishedEvents([]);
     }
-
+  }, [isNextRound]);
+  useEffect(() => {
     if(isGameOver['gameover']){
       console.log('GAME IS OVER');
       generateRound();
@@ -41,7 +42,7 @@ function App() {
       setFinishedEvents([]);
       setIsGameOver({gameover:false});
     }
-  }, [isNextRound, isGameOver]);
+  }, [isGameOver]);
 
   //generates a random event, keeping track of already shown events for the round
   const getRandomEvent = (events) => {
