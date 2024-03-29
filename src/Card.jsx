@@ -4,7 +4,7 @@ import CSS from './Card.module.css'
 
 
 const Card = (props) => {
-  const [stats, setStats, finishedEvents, setFinishedEvents, setIsNextRound] =
+  const [stats, setStats, finishedEvents, setFinishedEvents, setIsNextRound, setIsGameOver] =
     useContext(Context);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -20,7 +20,7 @@ const Card = (props) => {
       gainsArr.map(gain => {
         gains && setStats(prevStats => ({
           ...prevStats,
-           [gain]: stats[gain] += gains[gain]
+           [gain]:  stats[gain] += gains[gain]
         }))
       })
 
@@ -32,19 +32,24 @@ const Card = (props) => {
             ...prevStats,
             [loss]: (stats[loss] -= loses[loss]),
           }));
-      });
-
-      //if(stats["food"] === 0 || stats["people"] === 0 || stats["army"] === 0 || stats["money"])
-        //setIsGameOver(true)
+      });  
     }
 
-    console.log("cardStats", stats);
+    //hide the event
     setIsVisible(false);
-    setFinishedEvents((prev) => [...prev, props.event.id]);
 
+    //insert event id in a list of events that already happened this round
+    setFinishedEvents((prev) => [...prev, props.event.id]);
 
     //clicking the final event that lets you move to next year
     props.event?.nextRound && setIsNextRound(true)
+
+    console.log(stats["food"]);
+    //loss scenario
+    if(stats["food"] <= 0) setIsGameOver({gameover:true, reason:"food"})
+    if(stats["people"] <= 0) setIsGameOver({gameover:true, reason:"people"})
+    if(stats["army"] <= 0) setIsGameOver({gameover:true, reason:"army"})
+    if(stats["money"] <= 0) setIsGameOver({gameover:true, reason:"money"})
     //console.log(gains, "gained", loses, "lost");
     //console.log(Object.keys(gains));
   }

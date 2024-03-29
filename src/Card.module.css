@@ -11,6 +11,7 @@
     z-index:3;
     border:3px solid #333;
     overflow: hidden;
+    box-sizing: border-box;
     &:last-child {
         box-shadow: 0 1px 24px #000;
     }
@@ -85,7 +86,8 @@
     justify-content: center;
     position:relative;
     z-index:3;
-    max-width:420px;
+    max-width:414px;
+    width:100%;
     @media (max-width: 600px) {
        max-width: calc(100% - 52px);
     }
@@ -97,6 +99,7 @@
     text-align: center;
     padding:0 16px;
     font-size:18px;
+    width: calc(100%);
 }
 .text_mask {
     position:absolute;

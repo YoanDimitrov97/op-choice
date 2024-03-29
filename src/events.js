@@ -72,7 +72,7 @@ export const events = [
   {
     id: 7,
     event:
-      "Sire, it seems someone has discovered a Devil Fruit has grown on our territory...",
+      "Sire, it seems someone has discovered that a Devil Fruit has grown on our territory...",
     swipeLeftText: "Sell it.",
     swipeRightText: "Leave it",
     swipeLeftAfter: { gains: { money: 10 }, loses: {} },
