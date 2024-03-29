@@ -38,7 +38,7 @@ const Card = (props) => {
         //setIsGameOver(true)
     }
 
-
+    console.log("cardStats", stats);
     setIsVisible(false);
     setFinishedEvents((prev) => [...prev, props.event.id]);
 
