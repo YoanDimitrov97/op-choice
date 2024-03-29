@@ -17,20 +17,20 @@ const Card = (props) => {
 
     //calculate gains
     if (gainsArr.length > 0)
-      gainsArr.map(sphere => {
+      gainsArr.map(gain => {
         gains && setStats(prevStats => ({
           ...prevStats,
-          sphere: stats[sphere] += gains[sphere]
+           [gain]: stats[gain] += gains[gain]
         }))
       })
 
     //calculate loses
     if (losesArr.length > 0) {
-      losesArr.map((sphere) => {
+      losesArr.map((loss) => {
         loses &&
           setStats((prevStats) => ({
             ...prevStats,
-            sphere: (stats[sphere] -= loses[sphere]),
+            [loss]: (stats[loss] -= loses[loss]),
           }));
       });
 
