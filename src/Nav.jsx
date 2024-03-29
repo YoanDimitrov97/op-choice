@@ -8,10 +8,10 @@ import Money from './assets/money.png'
 
 export default function Nav() {
     const [stats] = useContext(Context);
-    const [navStats, setNavStats] = useState();
-    console.log(stats);
+    const [navStats, setNavStats] = useState(stats);
     useEffect(() => {
       setNavStats(stats)
+      console.log(navStats);
     }, [stats]);
     return (
       <nav>
