@@ -283,7 +283,7 @@ export const events = [
     swipeRightText: "Help them",
     swipeLeftAfter: { gains: { people:10 }, loses: { army: 10 } },
     swipeRightAfter: { gains: {money:20}, loses: { people: 10 } },
-    colorScheme: "white",
+    colorScheme: "black",
     imageUrl:
       "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/12/Donquixote-Family-Tragedy-One-Piece-Cropped.jpg",
   },
