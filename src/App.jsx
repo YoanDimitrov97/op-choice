@@ -7,7 +7,7 @@ import { events } from "./events";
 export const Context = React.createContext();
 
 function App() {
-  const [isGameOver, setIsGameOver] = useState({gameover: false, firstTimePlaying:true});
+  const [isGameOver, setIsGameOver] = useState({ gameover: false, firstTimePlaying: true });
   const [randomEventList, setRandomEventList] = useState([]);
   const [isNextRound, setIsNextRound] = useState(false);
 
@@ -36,7 +36,7 @@ function App() {
         army: 50,
         money: 50,
       })
-      setIsGameOver({gameover:false});
+      setIsGameOver({ gameover: false });
     }
   }, [isGameOver]);
 
@@ -56,13 +56,17 @@ function App() {
     setRandomEventList([])
     let alreadySelected = [];
     let generatedEvents = [];
+
+
     const randomEvents = Array.from({ length: 12 }, (_, index) => {
       let getEvent = getRandomEvent(events, alreadySelected)
       alreadySelected.push(getEvent.id);
       generatedEvents.push(getEvent);
     });
 
-    setRandomEventList([generateEventOnPassedRound(), ...generatedEvents])
+
+    setRandomEventList([generateEventOnPassedRound(), ...generatedEvents, generateStartingCard()
+    ])
     console.log(randomEventList);
   };
 
@@ -90,24 +94,19 @@ function App() {
     }
   };
   const generateStartingCard = () => {
-    return (
-      <Card
-        key={1000}
-        id={1000}
-        event={{
-          nextRound: true,
-          event:
-            "You are the King of a newly formed Country in the Grand Line, you are tasked with balancing food provisions, the needs of the people, the feelings of the army and the coffers of the Kingdom...",
-          swipeLeftText: "Okay...",
-          swipeRightText: "Bring it on!",
-          swipeLeftAfter: { gains: {}, loses: {} },
-          swipeRightAfter: { gains: {}, loses: {} },
-          colorScheme: "gold",
-          imageUrl:
-            "https://static.wikia.nocookie.net/onepiece/images/5/54/Bourgeois_Kingdom_Infobox.png",
-        }}
-      />
-    );
+    return {
+      id: 1000,
+      event:
+        "You are the King of a newly formed Country in the Grand Line, you are tasked with balancing food provisions, the needs of the people, the feelings of the army and the coffers of the Kingdom...",
+      swipeLeftText: "Okay...",
+      swipeRightText: "Bring it on!",
+      swipeLeftAfter: { gains: {}, loses: {} },
+      swipeRightAfter: { gains: {}, loses: {} },
+      colorScheme: "gold",
+      imageUrl:
+        "https://static.wikia.nocookie.net/onepiece/images/5/54/Bourgeois_Kingdom_Infobox.png",
+    }
+
   };
   const generateGameOverEvents = (lossReason) => {
     console.log("loss reason: ", lossReason);

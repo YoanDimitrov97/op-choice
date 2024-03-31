@@ -265,4 +265,15 @@ export const events = [
     imageUrl:
       "https://static.wikia.nocookie.net/onepiece/images/b/b7/Edward_Newgate_Anime_Infobox.png",
   },
+  {
+    id: 24,
+    event: "A renowned scholar offers to establish an academy on your island, promising to attract intellectuals and further advance knowledge.",
+    swipeLeftText: "Invest in him",
+    swipeRightText: "Waste of money",
+    swipeLeftAfter: { gains: { people:10 }, loses: { money: 10 } },
+    swipeRightAfter: { gains: {army:10}, loses: { people: 10 } },
+    colorScheme: "green",
+    imageUrl:
+      "https://staticg.sportskeeda.com/editor/2024/02/35e49-17089456420190-1920.jpg",
+  },
 ];
