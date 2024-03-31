@@ -276,4 +276,16 @@ export const events = [
     imageUrl:
       "https://staticg.sportskeeda.com/editor/2024/02/35e49-17089456420190-1920.jpg",
   },
+  {
+    id: 25,
+    event: "A Celestial Dragons family is begging for help from a mob of vigilantees...",
+    swipeLeftText: "Turn a blind eye",
+    swipeRightText: "Help them",
+    swipeLeftAfter: { gains: { people:10 }, loses: { army: 10 } },
+    swipeRightAfter: { gains: {money:20}, loses: { people: 10 } },
+    colorScheme: "white",
+    imageUrl:
+      "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/12/Donquixote-Family-Tragedy-One-Piece-Cropped.jpg",
+  },
 ];
+//
