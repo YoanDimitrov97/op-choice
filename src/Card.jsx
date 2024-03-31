@@ -4,9 +4,9 @@ import CSS from './Card.module.css'
 
 
 const Card = (props) => {
-  const [stats, setStats, setFinishedEvents, setIsNextRound, setIsGameOver] =
+  const [stats, setStats, setIsNextRound,isGameOver, setIsGameOver, randomEventList, setRandomEventList] =
     useContext(Context);
-  const [isVisible, setIsVisible] = useState(true);
+  //const [isVisible, setIsVisible] = useState(true);
 
   //calculate gains/loses after left/right swipe
   const conclusionCalculation = (eventAfter) => {
@@ -30,16 +30,10 @@ const Card = (props) => {
         loses &&
           setStats((prevStats) => ({
             ...prevStats,
-            [loss]: (stats[loss] -= loses[loss]),
+            [loss]: (stats[loss] - loses[loss] <= 0) ? setIsGameOver({gameover:true, reason:loss}) : stats[loss] -= loses[loss],
           }));
       });  
     }
-
-    //hide the event
-    setIsVisible(false);
-
-    //insert event id in a list of events that already happened this round
-    setFinishedEvents((prev) => [...prev, props.event.id]);
 
     //clicking the final event that lets you move to next year
     if(props.event?.nextRound) {
@@ -53,10 +47,20 @@ const Card = (props) => {
     if(stats["people"] <= 0) setIsGameOver({gameover:true, reason:"people"})
     if(stats["army"] <= 0) setIsGameOver({gameover:true, reason:"army"})
     if(stats["money"] <= 0) setIsGameOver({gameover:true, reason:"money"})
+    console.log(isGameOver);
     //console.log(gains, "gained", loses, "lost");
     //console.log(Object.keys(gains));
-  }
-
+    //hide the event
+    //setIsVisible(false);
+    removeEvent(props.event.id)
+  } 
+  const removeEvent = (eventId) => {
+    console.log("REMOVING EVENT");
+    // Filter out the item with the specified itemId
+    const updatedEvents = randomEventList.filter(event => event.id !== eventId);
+    // Update the state with the new array of items
+    setRandomEventList(updatedEvents);
+  };
   const handleClickLeft = () => {
     conclusionCalculation(props.event.swipeLeftAfter)
   }
@@ -66,7 +70,8 @@ const Card = (props) => {
 
   return (
     <div
-      className={`${CSS.card} ${isVisible ? "" : CSS.hidden}`}
+    //${isVisible ? "" : CSS.hidden}
+      className={`${CSS.card} `}
       style={{ zIndex: props.id, background: props.event.colorScheme }}
     >
       <div className={CSS.card_top}>

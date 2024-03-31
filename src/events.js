@@ -257,7 +257,7 @@ export const events = [
   {
     id: 23,
     event: "Sir, it seems that the great pirate Whitebeard is on our coast, asking us for a donation to his hometown, otherwise he'll destroy the island!",
-    swipeLeftText: "Give him the money",
+    swipeLeftText: "We'll donate",
     swipeRightText: "He's just bluffing",
     swipeLeftAfter: { gains: { }, loses: { money: 50 } },
     swipeRightAfter: { gains: {}, loses: { army: 20 } },
