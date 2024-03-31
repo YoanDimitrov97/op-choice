@@ -19,9 +19,10 @@ function App() {
   });
 
   useEffect(() => {
-    console.log(isNextRound);
+    
     //player successfully survived the round
     if (isNextRound) {
+      console.log("NEXTROUDN IF",isNextRound);
        generateRound();
       // Reset isNextRound state
       setIsNextRound(false);
@@ -63,7 +64,7 @@ function App() {
       const lossReason = isGameOver['reason']
       return [generateGameOverCard(lossReason), ...randomEvents];
     }
-    else if (!isNextRound && !isGameOver['gameover']  ) {
+    else if (!isNextRound ) {
       console.log("INSIDE NEXT ROUND");
       const randomEvents = Array.from({ length: 12 }, (_, index) => (
         <Card key={index + 2} id={index + 2} event={getRandomEvent(events)} />
@@ -175,7 +176,6 @@ function App() {
         value={[
           stats,
           setStats,
-          finishedEvents,
           setFinishedEvents,
           setIsNextRound,
           setIsGameOver
@@ -203,7 +203,7 @@ function App() {
             />
           )}
           {/* Generate X random events for the first time */}
-          { generateRound()}
+          {!isNextRound && generateRound()}
         </div>
       </Context.Provider>
     </>

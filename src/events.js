@@ -188,4 +188,81 @@ export const events = [
     imageUrl:
       "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/03/one-piece-new-giant-warriors-pirates.jpg",
   },
+  {
+    id: 17,
+    event: "The World Government is claiming you're hiding Revolutionaries!",
+    swipeLeftText: "Let them search..",
+    swipeRightText: "Lie to the Governement..",
+    swipeLeftAfter: { gains: { army: 10 }, loses: { people: 10 } },
+    swipeRightAfter: { gains: { people: 10 }, loses: { money: 10 } },
+    colorScheme: "lightblue",
+    imageUrl:
+      "https://qph.cf2.quoracdn.net/main-qimg-f0b27f43e20e5ad9f6302ee2738b5880-lq",
+  },
+  {
+    id: 18,
+    event: "My King, we have received reports that King of Beasts - Kaido has dropped down in the town square from the sky!",
+    swipeLeftText: "Send the Army to fight him!",
+    swipeRightText: "Offer him your finest alcohol.",
+    swipeLeftAfter: { gains: { }, loses: { army: 50 } },
+    swipeRightAfter: { gains: { }, loses: { food: 20 } },
+    colorScheme: "gray",
+    imageUrl:
+      "https://image.myanimelist.net/ui/KjC5Qbstm7gAuv45xSPyOaCW2oma2hN16AJTGuB8Yx6c4F6h1C5Chs_Y3f-pkWA8srWboxYR0KojacFLZ96sD0t-HOBCwUJ3Ff5KCZzpZyDTFfMlPc49aT5mwm5ttvry-KUCkj_YuATQziCNNLV7ags5MEFSWpoxwkhCNRV2lUc",
+  },
+  {
+    id: 19,
+    event: "We've received word that there is an illegal Slave Auction House in the Capital Downtown...",
+    swipeLeftText: "Free them..",
+    swipeRightText: "Do nothing.",
+    swipeLeftAfter: { gains: { people:10 }, loses: { food: 10 } },
+    swipeRightAfter: { gains: { money:10}, loses: { people: 10 } },
+    colorScheme: "pink",
+    imageUrl:
+      "https://www.opfanpage.com/wp-content/uploads/2018/03/1-15.png",
+  },
+  {
+    id: 20,
+    event: "We've recieved reports that Red Haired Shanks is drinking one of our bars dry, what do we do with him?",
+    swipeLeftText: "Capture him!",
+    swipeRightText: "Leave him be...",
+    swipeLeftAfter: { gains: { }, loses: { people: 50 } },
+    swipeRightAfter: { gains: {}, loses: { food: 20 } },
+    colorScheme: "red",
+    imageUrl:
+      "https://qph.cf2.quoracdn.net/main-qimg-e30c7a0a8d85ad0dfd65f89c8f5dc019-pjlq",
+  },
+  {
+    id: 21,
+    event: "It's an emergency, the emperor Charlotte Linlin is somehow rampaging in our capital, due to her hunger pangs...",
+    swipeLeftText: "Give her food...",
+    swipeRightText: "Bait her out of here.",
+    swipeLeftAfter: { gains: { }, loses: { food: 50 } },
+    swipeRightAfter: { gains: {}, loses: { people: 20 } },
+    colorScheme: "pink",
+    imageUrl:
+      "https://i.ytimg.com/vi/WdUDM9Wm7Os/maxresdefault.jpg",
+  },
+  {
+    id: 22,
+    event: "A young upstart calling himself Blackbeard is wreaking havoc and stealing our people's hard earned money!",
+    swipeLeftText: "Stop him!",
+    swipeRightText: "It's just money...",
+    swipeLeftAfter: { gains: { }, loses: { army: 50 } },
+    swipeRightAfter: { gains: {}, loses: { money: 20 } },
+    colorScheme: "black",
+    imageUrl:
+      "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/01/Blackbeard-Power.jpg",
+  },
+  {
+    id: 23,
+    event: "Sir, it seems that the great pirate Whitebeard is on our coast, asking us for a donation to his hometown, otherwise he'll destroy the island!",
+    swipeLeftText: "Give him the money",
+    swipeRightText: "He's just bluffing",
+    swipeLeftAfter: { gains: { }, loses: { money: 50 } },
+    swipeRightAfter: { gains: {}, loses: { army: 20 } },
+    colorScheme: "white",
+    imageUrl:
+      "https://static.wikia.nocookie.net/onepiece/images/b/b7/Edward_Newgate_Anime_Infobox.png",
+  },
 ];

@@ -4,7 +4,7 @@ import CSS from './Card.module.css'
 
 
 const Card = (props) => {
-  const [stats, setStats, finishedEvents, setFinishedEvents, setIsNextRound, setIsGameOver] =
+  const [stats, setStats, setFinishedEvents, setIsNextRound, setIsGameOver] =
     useContext(Context);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -42,9 +42,12 @@ const Card = (props) => {
     setFinishedEvents((prev) => [...prev, props.event.id]);
 
     //clicking the final event that lets you move to next year
-    props.event?.nextRound && setIsNextRound(true)
+    if(props.event?.nextRound) {
+      console.log("NEW EVENT");
+      setIsNextRound(true)
+    }
+      
 
-    console.log(stats["food"]);
     //loss scenario
     if(stats["food"] <= 0) setIsGameOver({gameover:true, reason:"food"})
     if(stats["people"] <= 0) setIsGameOver({gameover:true, reason:"people"})
