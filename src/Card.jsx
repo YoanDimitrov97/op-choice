@@ -6,7 +6,6 @@ import CSS from './Card.module.css'
 const Card = (props) => {
   const [stats, setStats, setIsNextRound,isGameOver, setIsGameOver, randomEventList, setRandomEventList] =
     useContext(Context);
-  //const [isVisible, setIsVisible] = useState(true);
 
   //calculate gains/loses after left/right swipe
   const conclusionCalculation = (eventAfter) => {
@@ -18,9 +17,11 @@ const Card = (props) => {
     //calculate gains
     if (gainsArr.length > 0)
       gainsArr.map(gain => {
+        let gainCalc = stats[gain] += gains[gain];
+        if(gainCalc > 100) gainCalc = 100;
         gains && setStats(prevStats => ({
           ...prevStats,
-           [gain]:  stats[gain] += gains[gain]
+           [gain]:  gainCalc
         }))
       })
 
@@ -50,8 +51,6 @@ const Card = (props) => {
     console.log(isGameOver);
     //console.log(gains, "gained", loses, "lost");
     //console.log(Object.keys(gains));
-    //hide the event
-    //setIsVisible(false);
     removeEvent(props.event.id)
   } 
   const removeEvent = (eventId) => {
@@ -70,7 +69,6 @@ const Card = (props) => {
 
   return (
     <div
-    //${isVisible ? "" : CSS.hidden}
       className={`${CSS.card} `}
       style={{ zIndex: props.id, background: props.event.colorScheme }}
     >
@@ -78,11 +76,11 @@ const Card = (props) => {
         <img className={CSS.background_img} src={props.event.imageUrl} />
         <div className={CSS.leftSwipe} onClick={handleClickLeft}>
           <div className={CSS.btn_mask}></div>
-          <span>{props.event?.swipeLeftText}</span>
+          <p>{props.event?.swipeLeftText}</p>
         </div>
         <div className={CSS.rightSwipe} onClick={handleClickRight}>
           <div className={CSS.btn_mask}></div>
-          <span>{props.event?.swipeRightText}</span>
+          <p>{props.event?.swipeRightText}</p>
         </div>
       </div>
       <div className={CSS.card_bottom}>

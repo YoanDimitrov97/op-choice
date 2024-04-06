@@ -76,8 +76,8 @@ export const events = [
     swipeLeftText: "Sell it.",
     swipeRightText: "Leave it",
     swipeLeftAfter: { gains: { money: 10 }, loses: {} },
-    swipeRightAfter: { gains: { food: 10 }, loses: {} },
-    colorScheme: "red",
+    swipeRightAfter: { gains: { army: 10 }, loses: {} },
+    colorScheme: "orange",
     imageUrl:
       "https://static.wikia.nocookie.net/op-rp/images/c/c3/Merameranomi.jpeg",
   },
@@ -286,6 +286,127 @@ export const events = [
     colorScheme: "black",
     imageUrl:
       "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/12/Donquixote-Family-Tragedy-One-Piece-Cropped.jpg",
+  },
+  {
+    id: 26,
+    event: "A group of refugees seeks asylum on your island, claiming to be fleeing persecution from the World Government",
+    swipeLeftText: "Move along",
+    swipeRightText: "They can stay",
+    swipeLeftAfter: { gains: { }, loses: { } },
+    swipeRightAfter: { gains: {people:10}, loses: { food: 10 } },
+    colorScheme: "gray",
+    imageUrl:
+      "https://i.ytimg.com/vi/Y1zseN-kMRI/maxresdefault.jpg",
+  },
+  {
+    id: 27,
+    event: "A Shichibukai has moved into your territory and became a hero of sorts to the people. Your spies have found out he's actually planning to take over your kingdom.",
+    swipeLeftText: "Make a deal.",
+    swipeRightText: "Kick him out",
+    swipeLeftAfter: { gains: { army:10 }, loses: { money: 10 } },
+    swipeRightAfter: { gains: {}, loses: { army:10, people: 10 } },
+    colorScheme: "brown",
+    imageUrl:
+      "https://fwmedia.fandomwire.com/wp-content/uploads/2023/09/29103847/Sir-Crocodile.jpg",
+  },                
+  {
+    id: 28,
+    event: "One of your vassals claims he had a prophetic dream about a hidden ancient weapon, buried beneath your castle...",
+    swipeLeftText: "He is crazy..",
+    swipeRightText: "Dig for it",
+    swipeLeftAfter: { gains: { }, loses: {} },
+    swipeRightAfter: { gains: {people:10}, loses: { money: 20 } },
+    colorScheme: "red",
+    imageUrl:
+      "https://www.greenscene.co.id/wp-content/uploads/2022/07/Pluton-2.jpg",
+  },
+  {
+    id: 29,
+    event: "My lord, a pirate armada is blocking one of our most important trading routes, we need to do something...",
+    swipeLeftText: "Call the WG",
+    swipeRightText: "Send our Army",
+    swipeLeftAfter: { gains: { }, loses: { money: 10 } },
+    swipeRightAfter: { gains: {}, loses: { army: 10 } },
+    colorScheme: "gray",
+    imageUrl:
+      "https://vignette3.wikia.nocookie.net/onepiece/images/e/e8/Edd_War_Infobox.png",
+  },
+  {
+    id: 30,
+    event: "A Celestial Dragon is proposing a large sum of money to take some of your citizens as slaves...",
+    swipeLeftText: "Ka-Ching!",
+    swipeRightText: "No.",
+    swipeLeftAfter: { gains: { money:20 }, loses: { people: 10 } },
+    swipeRightAfter: { gains: {}, loses: { army: 10 } },
+    colorScheme: "gold",
+    imageUrl:
+      "https://onepiece-merchandise.com/wp-content/uploads/2023/08/Appearance-and-Clothing-of-the-Celestial-Dragons.jpg",
+  },
+  {
+    id: 31,
+    event: "A group of religious pilgrims arrives, seeking to establish a sacred site on your island worshiping Satan.",
+    swipeLeftText: "Hell yea!",
+    swipeRightText: "Hell NO!",
+    swipeLeftAfter: { gains: { people:10 }, loses: { army: 10 } },
+    swipeRightAfter: { gains: {army:10}, loses: { } },
+    colorScheme: "black",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy60XaBTVFfpYjyBE2qTyVqJqutmGlzTQg5Fd8FZpSZ0FSg-0xTX53qYm2XQd0XnXOKM&usqp=CAU",
+  },
+  {
+    id: 32,
+    event: "A mysterious organization offers to fund your island's development in exchange for allegiance to their cause.",
+    swipeLeftText: "Okay",
+    swipeRightText: "I'll call the Navy.",
+    swipeLeftAfter: { gains: { money:10, food:10 }, loses: { army: 10 } },
+    swipeRightAfter: { gains: {army:10}, loses: { } },
+    colorScheme: "brown",
+    imageUrl:
+      "https://beebom.com/wp-content/uploads/2023/09/baroque-works-2.jpg",
+  },
+  {
+    id: 33,
+    event: "My lord, there are rumors that a secret Cipher Pol task force has infiltrated our island, conducting covert operations on government persons of interest..",
+    swipeLeftText: "Get rid of them",
+    swipeRightText: "We'll be compensated",
+    swipeLeftAfter: { gains: { people:10 }, loses: { army: 10 } },
+    swipeRightAfter: { gains: {money:20}, loses: {people:10} },
+    colorScheme: "black",
+    imageUrl:
+      "https://www.comingsoon.net/wp-content/uploads/sites/3/2022/05/One-Piece-Film-Red-CP9.png",
+  },
+  {
+    id: 34,
+    event: "Your men find an eternal log pose pointing towards an important Revolutionary Army base..",
+    swipeLeftText: "Destroy it",
+    swipeRightText: "Report to the WG",
+    swipeLeftAfter: { gains: { people:10 }, loses: {} },
+    swipeRightAfter: { gains: {money:20}, loses: {people:10} },
+    colorScheme: "green",
+    imageUrl:
+      "https://static.wikia.nocookie.net/onepiece/images/2/24/Burgess_Found_the_Revolutionary_Base.png",
+  },
+  {
+    id: 35,
+    event: "Sire, our slums are in dire need of food and money, people are starving on the streets and it's time we do some charity work.",
+    swipeLeftText: "Feed the people.",
+    swipeRightText: "Allocate some gold",
+    swipeLeftAfter: { gains: { people:20 }, loses: {food:20} },
+    swipeRightAfter: { gains: {army:10, people:10}, loses: {money:20} },
+    colorScheme: "brown",
+    imageUrl:
+      "https://moesucks.files.wordpress.com/2011/07/no-6-0407.png",
+  },
+  {
+    id: 36,
+    event: "Our population is wondering who you're backing in the race for the Navy's newest Fleet Admiral...",
+    swipeLeftText: "Back Aokiji",
+    swipeRightText: "Back Akainu",
+    swipeLeftAfter: { gains: { people:10 }, loses: {} },
+    swipeRightAfter: { gains: {army:10}, loses: {} },
+    colorScheme: "red",
+    imageUrl:
+      "https://i.ytimg.com/vi/My1Lkcbft8s/maxresdefault.jpg",
   },
 ];
 //
