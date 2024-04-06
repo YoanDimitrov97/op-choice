@@ -409,7 +409,7 @@ export const events = [
       "https://i.ytimg.com/vi/My1Lkcbft8s/maxresdefault.jpg",
   },
   {
-    id: 37,
+    id: 37,//fix
     event: "A Marine base on a nearby island requests emergency rations. They claim a giant sea monster is blocking their supply lines.",
     swipeLeftText: "Help them",
     swipeRightText: "AMAB",
@@ -417,7 +417,7 @@ export const events = [
     swipeRightAfter: { gains: {}, loses: {} },
     colorScheme: "lightblue",
     imageUrl:
-      "https://static.wikia.nocookie.net/onepiece/images/d/db/Shells_Town_Infobox.png/revision/latest?cb=20160803102349",
+      "https://static.wikia.nocookie.net/onepiece/images/d/db/Shells_Town_Infobox.png",
   },
   {
     id: 38,
@@ -464,7 +464,7 @@ export const events = [
       "https://qph.cf2.quoracdn.net/main-qimg-204be2916a40678b57572e037b5c078a-lq",
   },
   {
-    id: 42,
+    id: 42,//fix
     event: "A group of archaeologists discover ancient ruins deep within your island, hinting at a forgotten civilization.",
     swipeLeftText: "Excavate",
     swipeRightText: "Too expensive..",
@@ -472,7 +472,7 @@ export const events = [
     swipeRightAfter: { gains: {}, loses: {people:10} },
     colorScheme: "brown",
     imageUrl:
-      "https://static.wikia.nocookie.net/oproleplaying/images/1/13/Archaeologists.png/revision/latest?cb=20200626115905",
+      "https://static.wikia.nocookie.net/oproleplaying/images/1/13/Archaeologists.png",
   },
   {
     id: 43,
