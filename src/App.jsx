@@ -11,6 +11,7 @@ function App() {
   const [isGameOver, setIsGameOver] = useState({ gameover: false, firstTimePlaying: true });
   const [randomEventList, setRandomEventList] = useState([]);
   const [isNextRound, setIsNextRound] = useState(false);
+  const [isGameStart, setIsGameStart] = useState(true);
 
   const [stats, setStats] = useState({
     food: 50,
@@ -65,13 +66,15 @@ function App() {
       generatedEvents.push(getEvent);
     });
 
-    if(!isNextRound) 
-      
+    if(isGameStart) {
       setRandomEventList([generateEventOnPassedRound(), ...generatedEvents, generateStartingCard()
       ])
-    else
+      setIsGameStart(false)
+    }
+    else{
       setRandomEventList([generateEventOnPassedRound(), ...generatedEvents
       ])
+    }
 
     console.log(randomEventList);
   };

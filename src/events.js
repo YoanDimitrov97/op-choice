@@ -461,7 +461,7 @@ export const events = [
     swipeRightAfter: { gains: {people:10}, loses: {money:10} },
     colorScheme: "lightblue",
     imageUrl:
-      "https://m.media-amazon.com/images/M/MV5BMTM4NjBlOTctNjBjNi00MmVkLTg2ZDgtYzQ2MWM5YTY2Nzg5XkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg",
+      "https://qph.cf2.quoracdn.net/main-qimg-204be2916a40678b57572e037b5c078a-lq",
   },
   {
     id: 42,
@@ -481,7 +481,7 @@ export const events = [
     swipeRightText: "She's too ugly..",
     swipeLeftAfter: { gains: {money:10, people:10 }, loses: {food:10} },
     swipeRightAfter: { gains: {}, loses: {army:10} },
-    colorScheme: "green",
+    colorScheme: "red",
     imageUrl:
       "https://qph.cf2.quoracdn.net/main-qimg-11fc941b41b138f130e14d2b27c66c56-pjlq",
   },
@@ -494,7 +494,7 @@ export const events = [
     swipeRightAfter: { gains: {people:10}, loses: {money:10} },
     colorScheme: "green",
     imageUrl:
-      "https://static.wikia.nocookie.net/onepiece/images/2/2a/Scurvy_Infobox.png/revision/latest?cb=20221126221922",
+      "https://static.wikia.nocookie.net/onepiece/images/2/2a/Scurvy_Infobox.png",
   },
   {
     id: 45,
