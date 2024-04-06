@@ -408,5 +408,137 @@ export const events = [
     imageUrl:
       "https://i.ytimg.com/vi/My1Lkcbft8s/maxresdefault.jpg",
   },
+  {
+    id: 37,
+    event: "A Marine base on a nearby island requests emergency rations. They claim a giant sea monster is blocking their supply lines.",
+    swipeLeftText: "Help them",
+    swipeRightText: "AMAB",
+    swipeLeftAfter: { gains: { army:10 }, loses: {food:20} },
+    swipeRightAfter: { gains: {}, loses: {} },
+    colorScheme: "lightblue",
+    imageUrl:
+      "https://static.wikia.nocookie.net/onepiece/images/d/db/Shells_Town_Infobox.png/revision/latest?cb=20160803102349",
+  },
+  {
+    id: 38,
+    event: "A legendary blacksmith from Wano arrives, offering to forge a powerful sword for you, but requires rare materials.",
+    swipeLeftText: "Pay him",
+    swipeRightText: "Decline the offer",
+    swipeLeftAfter: { gains: { army:10 }, loses: {money:10} },
+    swipeRightAfter: { gains: {}, loses: {} },
+    colorScheme: "green",
+    imageUrl:
+      "https://i.ytimg.com/vi/fnIaw0P6hBE/maxresdefault.jpg",
+  },
+  {
+    id: 39,
+    event: "Scouts report a mysterious ship has been circling your waters for days, refusing to identify itself.",
+    swipeLeftText: "Investigate!",
+    swipeRightText: "Ignore it",
+    swipeLeftAfter: { gains: { money:10 }, loses: {food:10} },
+    swipeRightAfter: { gains: {}, loses: {people:10} },
+    colorScheme: "black",
+    imageUrl:
+      "https://i.pinimg.com/736x/2f/2c/83/2f2c831ad1289e6258fc6b939cb95692.jpg",
+  },
+  {
+    id: 40,
+    event: "A renowned artist offers to paint a mural depicting your kingdom's history on your palace walls, but requires artistic freedom.",
+    swipeLeftText: "Commision it",
+    swipeRightText: "I'd rather not..",
+    swipeLeftAfter: { gains: { army:10 }, loses: {money:10} },
+    swipeRightAfter: { gains: {}, loses: {army:10} },
+    colorScheme: "green",
+    imageUrl:
+      "https://m.media-amazon.com/images/M/MV5BMTM4NjBlOTctNjBjNi00MmVkLTg2ZDgtYzQ2MWM5YTY2Nzg5XkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg",
+  },
+  {
+    id: 41,
+    event: "Tensions rise with a neighboring kingdom after a fishman claims your country is enslaving his kind.",
+    swipeLeftText: "Bullshit!",
+    swipeRightText: "We'll investigate",
+    swipeLeftAfter: { gains: { }, loses: {people:10} },
+    swipeRightAfter: { gains: {people:10}, loses: {money:10} },
+    colorScheme: "lightblue",
+    imageUrl:
+      "https://m.media-amazon.com/images/M/MV5BMTM4NjBlOTctNjBjNi00MmVkLTg2ZDgtYzQ2MWM5YTY2Nzg5XkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg",
+  },
+  {
+    id: 42,
+    event: "A group of archaeologists discover ancient ruins deep within your island, hinting at a forgotten civilization.",
+    swipeLeftText: "Excavate",
+    swipeRightText: "Too expensive..",
+    swipeLeftAfter: { gains: {money:20 }, loses: {food:10} },
+    swipeRightAfter: { gains: {}, loses: {people:10} },
+    colorScheme: "brown",
+    imageUrl:
+      "https://static.wikia.nocookie.net/oproleplaying/images/1/13/Archaeologists.png/revision/latest?cb=20200626115905",
+  },
+  {
+    id: 43,
+    event: "A rival kingdom proposes a marriage alliance between your heir and their princess, potentially uniting the regions.",
+    swipeLeftText: "Let's do it!",
+    swipeRightText: "She's too ugly..",
+    swipeLeftAfter: { gains: {money:10, people:10 }, loses: {food:10} },
+    swipeRightAfter: { gains: {}, loses: {army:10} },
+    colorScheme: "green",
+    imageUrl:
+      "https://qph.cf2.quoracdn.net/main-qimg-11fc941b41b138f130e14d2b27c66c56-pjlq",
+  },
+  {
+    id: 44,
+    event: "A mysterious illness plagues your royal guard, leaving your palace vulnerable to potential threats.",
+    swipeLeftText: "Hire replacements",
+    swipeRightText: "Invest in cure",
+    swipeLeftAfter: { gains: {army:10 }, loses: {money:20} },
+    swipeRightAfter: { gains: {people:10}, loses: {money:10} },
+    colorScheme: "green",
+    imageUrl:
+      "https://static.wikia.nocookie.net/onepiece/images/2/2a/Scurvy_Infobox.png/revision/latest?cb=20221126221922",
+  },
+  {
+    id: 45,
+    event: "A hidden network of spies whispers of a plot by a neighboring kingdom to launch a surprise attack.",
+    swipeLeftText: "Send diplomats",
+    swipeRightText: "Attack first",
+    swipeLeftAfter: { gains: { }, loses: {people:10} },
+    swipeRightAfter: { gains: {army:10}, loses: {people:10} },
+    colorScheme: "red",
+    imageUrl:
+      "https://m.media-amazon.com/images/M/MV5BMGYyMDQ5NmItMGNkYS00MTUxLTk1YTAtN2ZlM2QyZjE4MWU3XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg",
+  },
+  {
+    id: 46,
+    event: "A legendary pirate requests safe haven on your island, claiming to be pursued by the Marines for a past good deed.",
+    swipeLeftText: "Too dangerous.",
+    swipeRightText: "Welcome!",
+    swipeLeftAfter: { gains: { money:10 }, loses: {people:10} },
+    swipeRightAfter: { gains: {army:20}, loses: {food:10} },
+    colorScheme: "gray",
+    imageUrl:
+      "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/01/Rayleigh-One-Piece-Yonko-Level1.jpg",
+  },
+  {
+    id: 47,
+    event: "A mysterious illness strikes your most valuable livestock, jeopardizing your meat production and export economy.",
+    swipeLeftText: "Quarantine",
+    swipeRightText: "Cull the infected",
+    swipeLeftAfter: { gains: { }, loses: {money:10} },
+    swipeRightAfter: { gains: {}, loses: {food:10} },
+    colorScheme: "red",
+    imageUrl:
+      "https://qph.cf2.quoracdn.net/main-qimg-5229b85accade5bdfe1b7587fbe8ce0e",
+  },
+  {
+    id: 48,
+    event: "A hidden cove on your island is rumored to be a haven for smugglers and pirates.",
+    swipeLeftText: "Raid them",
+    swipeRightText: "Impose stricter patrols",
+    swipeLeftAfter: { gains: { money:10}, loses: {army:10} },
+    swipeRightAfter: { gains: {army:10}, loses: {money:10} },
+    colorScheme: "gold",
+    imageUrl:
+      "https://www.rarefandabase.com/wp-content/uploads/2016/05/Ciu3RsVXIAAFmkL.jpg",
+  },
 ];
 //
